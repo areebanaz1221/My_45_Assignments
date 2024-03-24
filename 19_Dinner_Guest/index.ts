@@ -1,0 +1,47 @@
+
+let Guest_List :string[] = ['Sir Kamran Khan Tessori','Sir Daniyal Nagori','Sir Zia Khan'];
+// for(let i=0; i<Guest_List.length; i++){
+//     console.log('Dear Mr. ' + Guest_List[i] + ',\n\nIt is our pleasure to invite you in our party.\n\nThank You!\n\n')
+// }
+
+let absent_Guest :string = 'Sir Kamran Khan Tessori' ;
+let new_Guest :string = 'Sir Aalam' ;
+Guest_List[0] = new_Guest ;
+
+// for(let i=0; i<Guest_List.length; i++){
+//     console.log('Dear Mr. ' + Guest_List[i] + ',\n\nIt is our pleasure to invite you in our party.\n\nThank You!\n\n')
+// }
+
+console.log(`Sir. ${absent_Guest} is not coming to the party.`);
+console.log('Good News! We find Big Table So we are inviting 3 more guests.')
+
+
+Guest_List.unshift('Sir Zeeshan') ;
+Guest_List.splice(2 , 0 , 'Sir Ameen');
+Guest_List.push('Sir Hamza');
+
+
+for(let i=0; i<Guest_List.length; i++){
+    console.log('Dear Sir. ' + Guest_List[i] + ',\n\nIt is our pleasure to invite you in our party.\n\nThank You!\n\n')
+}
+
+// Sorry Message to guest for not inviting.
+console.log('\nSorry we can not arrange big table, Only Two peoples will be invited.');
+
+
+while(Guest_List.length > 2){
+   let remove_Guest = Guest_List.pop();
+   console.log(`Sorry Sir. ${remove_Guest}, You are not invited for Dinner.`);
+}
+
+
+for(let i=0; i<Guest_List.length; i++){
+    console.log('Dear Sir. ' + Guest_List[i] + ',\n\nYou are still invited.\n\nThank You!\n\n')
+}
+
+
+Guest_List.splice(0, 2);
+
+console.log(Guest_List);
+
+console.log('\n\n' + Guest_List.length);
